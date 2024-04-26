@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.image-container {
+    position: relative;
+  }
+  
+  .hover-button {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: #A88E64;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .image-container:hover .hover-button {
+    opacity: 1;
+  }
+  

@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 const Layout = () => {
     return (
         <div >
-            <div className='container mx-auto my-5'>
+            <div className='container md:mx-auto md:my-5'>
                 <Navbar></Navbar>
             </div>
             <div className='container mx-auto'>
