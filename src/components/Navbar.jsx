@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
 
     const NavLinks = <>
-        <li><NavLink to='/' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Home</NavLink></li>
-        <li><NavLink to='/all-tourists-spot' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>All Tourists Spot</NavLink></li>
-        <li><NavLink to='/add-tourists-spot' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Add Tourists Spot</NavLink></li>
-        <li><NavLink to='/my-list' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>My List</NavLink></li>
-        <li><NavLink to='/login' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Login</NavLink></li>
-        <li><NavLink to='/register' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Register</NavLink></li>
+        <li><NavLink to='/' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg '}>Home</NavLink></li>
+        <li><NavLink to='/all-tourists-spot' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium ' : 'text-[rgba(19,19,19,0.80)] text-lg '}>All Tourists Spot</NavLink></li>
+        <li><NavLink to='/add-tourists-spot' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg '}>Add Tourists Spot</NavLink></li>
+        <li><NavLink to='/my-list' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg '}>My List</NavLink></li>
+        <li><NavLink to='/login' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg '}>Login</NavLink></li>
+        <li><NavLink to='/register' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg '}>Register</NavLink></li>
     </>
 
     return (
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-xl">daisyUI</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className=" gap-6 menu-horizontal px-1">
                     {NavLinks}
                 </ul>
             </div>
