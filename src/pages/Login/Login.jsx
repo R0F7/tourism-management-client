@@ -24,8 +24,8 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/' );
                 
             })
-            .catch(error => {
-                console.log(error);
+            .catch(() => {
+                toast.error('Invalid Email or Password')
             })
     }
 
@@ -36,7 +36,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/' );
             })
             .catch((error) => {
-                console.log(error);
+                toast.error(error.message);
             })
     }
 
@@ -47,7 +47,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/' );
             })
             .catch((error) => {
-                console.log(error);
+                toast.error(error.message);
             })
     }
 

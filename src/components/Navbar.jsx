@@ -49,8 +49,8 @@ const Navbar = () => {
                         </div>
                         
                         : <div className='flex gap-4'>
-                            <NavLink to='/login' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg border-t-2 rounded-lg border-[#A88E64]'}>Login</NavLink>
-                            <NavLink to='/register' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] text-lg border-t-2 rounded-lg border-[#A88E64]'}>Register</NavLink>
+                            <NavLink to='/login' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] border px-5 py-1.5 rounded-md border-[#A88E64] '}>Login</NavLink>
+                            <NavLink to='/register' className={({ isActive }) => isActive ? 'border-b-2 py-1.5 px-2 rounded-md border-[#A88E64] text-[#A88E64] text-lg font-medium' : 'text-[rgba(19,19,19,0.80)] border py-1.5 px-3 rounded-md border-[#A88E64] '}>Register</NavLink>
                         </div>
                     // <Link to='/login' className="btn bg-cyan-400 text-white">Login</Link>
                 }

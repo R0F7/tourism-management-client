@@ -7,6 +7,8 @@ import AllTouristsSpot from "../pages/AllTouristsSpot/AllTouristsSpot";
 import AddTouristsSpot from "../pages/AddTouristsSpot/AddTouristsSpot";
 import MyList from "../pages/MyList/MyList";
 import ProtectedRoute from "./ProtectedRoute";
+import Details from "../pages/Details/Details";
+import UpdatePage from "../pages/UpdatePage/UpdatePage";
 
 const route = createBrowserRouter([
     {
@@ -16,10 +18,12 @@ const route = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/tourists-spot'),
             },
             {
                 path: '/all-tourists-spot',
-                element: <AllTouristsSpot></AllTouristsSpot>
+                element: <AllTouristsSpot></AllTouristsSpot>,
+                loader: () => fetch('http://localhost:5000/tourists-spot'),
             },
             {
                 path: '/add-tourists-spot',
@@ -36,6 +40,16 @@ const route = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/tourists-spot/:id',
+                element: <ProtectedRoute><Details></Details></ProtectedRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`)
+            },
+            {
+                path:'/update/:id',
+                element:<UpdatePage></UpdatePage>,
+                loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`),
             }
         ]
     }
