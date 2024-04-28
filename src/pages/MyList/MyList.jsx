@@ -17,7 +17,8 @@ const MyList = () => {
             })
     }, [])
 
-    console.log(myData,);
+    // console.log(myData);
+
     return (
         <div>
             <div className="container p-2 mx-auto sm:p-4">
