@@ -9,6 +9,7 @@ import MyList from "../pages/MyList/MyList";
 import ProtectedRoute from "./ProtectedRoute";
 import Details from "../pages/Details/Details";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
+import ShowCountryData from "../pages/ShowCountryData/ShowCountryData";
 
 const route = createBrowserRouter([
     {
@@ -47,11 +48,15 @@ const route = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`)
             },
             {
-                path:'/update/:id',
-                element:<UpdatePage></UpdatePage>,
+                path: '/update/:id',
+                element: <UpdatePage></UpdatePage>,
                 loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`),
             },
-            
+            {
+                path: '/country/:name',
+                element: <ShowCountryData></ShowCountryData>,
+                loader: ({ params }) => fetch(`http://localhost:5000/tourists-country/${params.name}`)
+            }
         ]
     }
 ])
