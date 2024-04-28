@@ -20,7 +20,7 @@ const TourismSpotCard = ({ data }) => {
                         <h6 className=''>{travel_time}</h6>
                     </div>
                     <div className='text-3xl my-1 text-[#A88E64]'>
-                        <h6>{average_cost}</h6>
+                        <h6>${average_cost}</h6>
                     </div>
                     <div>
                         <h4 className='text-lg font-semibold text-[#52525E]'>Seasonality: <span className='font-normal'>{seasonality}</span></h4>

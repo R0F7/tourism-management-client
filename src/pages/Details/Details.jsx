@@ -20,7 +20,7 @@ const Details = () => {
                         <p className=" text-[#52525E] ">{short_description}</p>
                         <h4></h4>
                         <div className="flex items-end my-2">
-                            <h4 className="text-4xl text-[#A88E64] font-semibold">{average_cost}</h4>
+                            <h4 className="text-4xl text-[#A88E64] font-semibold">${average_cost}</h4>
                             <span className="text-xl text-[#52525c]">/ {travel_time}</span>
                         </div>
                         <div className="mb-4">
