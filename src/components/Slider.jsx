@@ -28,9 +28,13 @@ export default function Slider() {
         
 
 
-        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/NWF5Rkr/slider3.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/HxDXQvc/slider1.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/WW36tsT/slider2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/VB2SmvN/activites-paris-junior-1100x700.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/LxpKvYQ/italy.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/RCDxwhW/sagrada-familia-top-spain-tourist-attractions-1030x713.jpg" alt="" /></SwiperSlide>
+        {/* <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/8P2fkY6/VIDEO-SHARE-12385.jpg" alt="" /></SwiperSlide> */}
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/FgJBkwt/England-sliderjpg.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/dL2Zt3X/Netherlands-slider.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[600px]' src="https://i.ibb.co/TY1KRjT/Switzerland-slider.webp" alt="" /></SwiperSlide>
         {/* <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>

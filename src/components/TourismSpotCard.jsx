@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import { FaRegHeart } from "react-icons/fa";
 
 const TourismSpotCard = ({ data }) => {
     const { _id, imageURL, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, userName, userEmail, userImage } = data;
@@ -7,8 +8,9 @@ const TourismSpotCard = ({ data }) => {
 
     return (
         <div className='shadow-sm'>
-            <div className='h-[225px]'>
+            <div className='h-[225px] relative'>
                 <img className='w-full h-full' src={imageURL} alt="" />
+                <span className='text-2xl text-gray-300 absolute top-5 right-5'><FaRegHeart /></span>
             </div>
             <div className='bg-[#FFFFFF]'>
                 <div className='p-4 pb-'>

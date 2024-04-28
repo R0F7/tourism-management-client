@@ -1,9 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../../components/Slider";
 import TourismSpotCard from "../../components/TourismSpotCard";
+import { useEffect, useState } from "react";
+import CountryCard from "../../components/CountryCard";
 
 const Home = () => {
     const info = useLoaderData();
+    const [countries, setCountries] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/tourists-country')
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            setCountries(data)
+        })
+    },[])
+    // console.log(countries);
 
     return (
         <div>
@@ -20,6 +33,11 @@ const Home = () => {
                         }
                     </div>
                 </div>
+            </div>
+            <div className="grid grid-cols-3 my-10 gap-6">
+                {
+                    countries.map((country) => <CountryCard key={country._id} country={country}></CountryCard>)
+                }
             </div>
         </div>
     );
