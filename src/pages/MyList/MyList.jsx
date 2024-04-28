@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -18,6 +19,40 @@ const MyList = () => {
     }, [])
 
     // console.log(myData);
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        })
+            .then(result => {
+                if (result.isConfirmed) {
+                    fetch(`http://localhost:5000/tourists-spot/${id}`, {
+                        method: 'DELETE'
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: "Your Coffee has been deleted.",
+                                    icon: "success"
+                                });
+                                const remaining = myData.filter(data => data._id !== id);
+                                setMyData(remaining)
+                            }
+
+                        })
+                }
+            })
+
+
+    }
 
     return (
         <div>
@@ -44,58 +79,35 @@ const MyList = () => {
                             </tr>
                         </thead>
                         <tbody>
+
                             {
                                 myData.map((data, idx) => <tr key={idx} className="border-b border-opacity-20 border-gray-900 bg-gray-100">
-                                <td className="p-3 text-black">
-                                    <p>{idx + 1}</p>
-                                </td>
-                                <td className="p-3 text-black">
-                                    <p>{data.tourists_spot_name}</p>
-                                </td>
-                                <td className="p-3 text-black">
-                                    <p>{data.location}</p>
-                                    <p className="text-gray-400">{data.country_Name}</p>
-                                </td>
-                                <td className="p-3 text-black">
-                                    <p>{data.average_cost}</p>
-                                </td>
-                                <td className="p-3 md:text-right">
-                                <span className="px-3 py-1 font-semibold rounded border border-[#A88E64] text-[#A88E64] hover:bg-[#A88E64] hover:text-white hover:border-0 hover:transition-colors hover:duration-500">
-                                        <Link to={`/update/${data._id}`}>update</Link>
-                                    </span>
-                                </td>
-                                <td className="p-3">
-                                    <span className="px-3 py-1 font-semibold rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-500 hover:border hover:font-bold border-red-600 hover:transition-colors hover:duration-500">
-                                        <span>delete</span>
-                                    </span>
-                                </td>
-                            </tr>)
+                                    <td className="p-3 text-black">
+                                        <p>{idx + 1}</p>
+                                    </td>
+                                    <td className="p-3 text-black">
+                                        <p>{data.tourists_spot_name}</p>
+                                    </td>
+                                    <td className="p-3 text-black">
+                                        <p>{data.location}</p>
+                                        <p className="text-gray-400">{data.country_Name}</p>
+                                    </td>
+                                    <td className="p-3 text-black">
+                                        <p>{data.average_cost}</p>
+                                    </td>
+                                    <td className="p-3 md:text-right">
+                                        <span className="px-3 py-1 font-semibold rounded border border-[#A88E64] text-[#A88E64] hover:bg-[#A88E64] hover:text-white hover:border-0 hover:transition-colors hover:duration-500">
+                                            <Link to={`/update/${data._id}`}>update</Link>
+                                        </span>
+                                    </td>
+                                    <td className="p-3">
+                                        <span className="px-3 py-1 font-semibold rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-500 hover:border hover:font-bold border-red-600 hover:transition-colors hover:duration-500">
+                                            <span onClick={() => handleDelete(data._id)}>delete</span>
+                                        </span>
+                                    </td>
+                                </tr>)
                             }
-                            {/* <tr className="border-b border-opacity-20 border-gray-700 bg-gray-900">
-                                <td className="p-3">
-                                    <p>#</p>
-                                </td>
-                                <td className="p-3">
-                                    <p>Spot Name</p>
-                                </td>
-                                <td className="p-3">
-                                    <p>location</p>
-                                    <p className="text-gray-400">country</p>
-                                </td>
-                                <td className="p-3">
-                                    <p>average cost</p>
-                                </td>
-                                <td className="p-3 text-right">
-                                <span className="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                                        <span>update</span>
-                                    </span>
-                                </td>
-                                <td className="p-3 text-right">
-                                    <span className="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                                        <span>delete</span>
-                                    </span>
-                                </td>
-                            </tr> */}
+
                         </tbody>
                     </table>
                 </div>
