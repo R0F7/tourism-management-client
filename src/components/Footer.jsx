@@ -8,12 +8,10 @@ const Footer = () => {
     return (
         <div className="bg-base-300">
             <div className="container mx-auto ">
-                <footer className="grid grid-cols-7 gap-0 pt-12 pb-14  text-base-content">
-                    <nav className=" flex flex-col">
+                <footer className="grid grid-cols-3 lg:grid-cols-7 gap-5 pt-12 pb-5 lg:pb-14  text-base-content">
+                    <nav className=" flex flex-col col-span-3 lg:col-span-1">
                         <a className="text-xl lg:text-2xl font-bold">Travel<span className='text-[#A88E64]'>Wise</span></a>
-                        <a className="link link-hover w-[75%] mb-2">1309 Coffeen Avenue STE 1200 SHERIDAN WY 82801</a>
-                        {/* <a className="link link-hover">STE 1200 SHERIDAN WY 82801</a> */}
-                        {/* <a className="link link-hover">WY 82801</a> */}
+                        <a className="link link-hover w-[75%] mb-2 text-[#7F8C8D] font-medium">1309 Coffeen Avenue STE 1200 SHERIDAN WY 82801</a>
                         <a className="link link-hover ">+1 (253) 225 5550</a>
                         <a>tourassist@TravelWise.com</a>
                     </nav>

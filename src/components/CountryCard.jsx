@@ -12,7 +12,7 @@ const CountryCard = ({ country }) => {
             </div>
             <div>
                 <h4 className='text-2xl text-[#A88E64] font-bold mt-2 mb-2.5 border-b-2 border-[#A88E64] pb-1 pr-4 inline-block'>{country_name}</h4>
-                <p>{description}</p>
+                <p className='text-[#7F8C8D]'>{description}</p>
             </div>
 
         </Link>

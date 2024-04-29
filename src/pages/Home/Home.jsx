@@ -22,27 +22,30 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <div className="my-10">
-                <div className="mt-14 mb-10">
+                <div className="mt-14 mb-6 lg:mb-10">
                     <h4 className="text-4xl font-bold text-center">Top Tourist Spots Await You on TravelWise</h4>
                     <p className="w-3/4 text-center mx-auto mt-3">Embark on an unforgettable journey through Europe's cultural gems! Explore enchanting landmarks, vibrant cities, and breathtaking landscapes across France, Italy, Spain, England, Netherlands, and Switzerland with TravelWise's curated tourist spots section</p>
                 </div>
                 <div className="bg-[#EDF2F6] ">
-                    <div className="grid grid-cols-3 gap-8 p-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-8 md:p-4 lg:p-8">
                         {
                             info.slice(0, 6).map(data => <TourismSpotCard key={data._id} data={data}></TourismSpotCard>)
                         }
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-3 my-10 gap-6">
-                {
-                    countries.map((country) => <CountryCard key={country._id} country={country}></CountryCard>)
-                }
+            <div className="my-10">
+                <h4 className="text-2xl font-bold text-[#A88E64] mb-5 border-l-4 pl-2 border-[#A88E64]">Countries</h4>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {
+                        countries.map((country) => <CountryCard key={country._id} country={country}></CountryCard>)
+                    }
+                </div>
             </div>
 
-            <div className="flex gap-6 my-10 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 my-10 items-center">
                 <div>
-                    <img className="h-[500px] w-full" src="https://i.ibb.co/F5Wm7hd/Blog-20210609b4d500f4290d9443c25ea31f915c3a18.png" alt="" />
+                    <img className="lg:h-[500px] w-full" src="https://i.ibb.co/F5Wm7hd/Blog-20210609b4d500f4290d9443c25ea31f915c3a18.png" alt="" />
                 </div>
                 <div>
                     <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 ">Travel Tips & Guides</h2>
@@ -58,11 +61,11 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
-            <div className="flex gap-6 flex-row-reverse my-10 items-center">
-                <div className="w-2/5">
+            <div className="flex gap-6 flex-col lg:flex-row-reverse my-10 items-center">
+                <div className="lg:w-2/5">
                     <img className="h-[500px] w-full" src="https://i.ibb.co/6YhdxTs/2-dubrovnik-local-countryside-private-dining-experience.jpg" alt="" />
                 </div>
-                <div className="w-3/5">
+                <div className="lg:w-3/5">
                     <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 ">Local Cuisine & Dining Experiences</h2>
                     <p className="w-[70%] mt-2 mb-4">Indulge your taste buds in the rich and diverse culinary delights of our destination. From street food stalls to fine dining establishments, immerse yourself in the vibrant flavors and culinary traditions that define our region</p>
                     <ul className="list-disc space-y-2 ml-6 text-md">
