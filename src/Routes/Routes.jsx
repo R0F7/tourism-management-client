@@ -10,11 +10,13 @@ import ProtectedRoute from "./ProtectedRoute";
 import Details from "../pages/Details/Details";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import ShowCountryData from "../pages/ShowCountryData/ShowCountryData";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const route = createBrowserRouter([
     {
         path: '/',
         element: <Layout></Layout>,
+        errorElement:<NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',

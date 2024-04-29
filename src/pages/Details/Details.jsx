@@ -17,15 +17,15 @@ const Details = () => {
                             <h6 className="text-[20px] text-[#52525E]">{location}</h6>
                             <h6 className="text-[25px] font-medium text-[#52525E] opacity-85">{country_Name}</h6>
                         </div>
-                        <p className=" text-[#52525E] ">{short_description}</p>
+                        <p className=" text-[#95A5A6] ">{short_description}</p>
                         <h4></h4>
                         <div className="flex items-end my-2">
                             <h4 className="text-4xl text-[#A88E64] font-semibold">${average_cost}</h4>
-                            <span className="text-xl text-[#52525c]">/ {travel_time}</span>
+                            <span className="text-xl text-[#7F8C8D]">/ {travel_time}</span>
                         </div>
                         <div className="mb-4">
-                            <h6 className="text-[#52525E] text-lg font-medium">Seasonality: <span className="font-normal">{seasonality}</span></h6>
-                            <h6 className="text-[#52525E] text-lg font-medium">Total Visitors Per Year: <span className="font-normal">{totalVisitorsPerYear}</span></h6>
+                            <h6 className="text-[rgb(82,82,94,.75)] text-lg font-semibold">Seasonality: <span className="font-normal text-[rgb(127,140,141,.8)]">{seasonality}</span></h6>
+                            <h6 className="text-[rgb(82,82,94,.75)] text-lg font-semibold">Total Visitors Per Year: <span className="font-normal text-[rgb(127,140,141,.8)]">{totalVisitorsPerYear}</span></h6>
                         </div>
 
                         <div className=' border-l-[8px] border-l-[#A88E64] border-opacity-70 pt-3 pb-6 px-4 bg-[#F8F9FB] relative border shadow'>
