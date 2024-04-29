@@ -39,19 +39,42 @@ const Home = () => {
                     countries.map((country) => <CountryCard key={country._id} country={country}></CountryCard>)
                 }
             </div>
-            <div>
-                <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 ">Travel Tips & Guides</h2>
-                <p className="w-[70%] mt-1 mb-3">Discover insider tips and expert advice to make the most out of your travel experience. From packing essentials to cultural etiquette, our comprehensive guides will ensure you're well-prepared for your next adventure.</p>
-                <ul className="list-disc space-y-2">
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Pack Light:</span> Traveling with less luggage not only makes it easier to move around but also saves you from excess baggage fees. Stick to essentials and versatile clothing items that you can mix and match.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Research Local Customs:</span> Before visiting a new destination, take some time to learn about the local customs and traditions. This includes understanding appropriate attire, greeting etiquette, and cultural norms to ensure respectful interactions with locals.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Stay Hydrated:</span> Traveling can be exhausting, especially in unfamiliar environments. Remember to drink plenty of water throughout your journey to stay hydrated and maintain your energy levels, especially in hot climates or during physical activities.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Backup Important Documents:</span> Make digital copies of important documents such as your passport, ID, travel insurance, and itinerary. Store these documents securely in cloud storage or email them to yourself for easy access in case of emergencies or loss.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Be Mindful of Scams:</span> Stay vigilant and be cautious of common travel scams targeting tourists, such as overcharging for goods or services, fake taxi drivers, or distraction techniques. Research common scams in your destination and stay alert to avoid falling victim.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Learn Basic Phrases:</span> Even if you don't speak the local language fluently, learning a few basic phrases such as "hello," "thank you," and "please" can go a long way in fostering positive interactions with locals and showing respect for their culture.</li>
-                    <li className="text-[#7F8C8D] w-[80%]"><span className="text-[#7F8C8D] font-bold">Travel Insurance:</span> Invest in comprehensive travel insurance to protect yourself against unexpected events such as trip cancellations, medical emergencies, or lost luggage. Read the policy carefully to understand coverage and exclusions before your trip.</li>
-                </ul>
+
+            <div className="flex gap-6 my-10 items-center">
+                <div>
+                    <img className="h-[500px] w-full" src="https://i.ibb.co/F5Wm7hd/Blog-20210609b4d500f4290d9443c25ea31f915c3a18.png" alt="" />
+                </div>
+                <div>
+                    <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 ">Travel Tips & Guides</h2>
+                    <p className="w-[70%] mt-2 mb-4">Discover insider tips and expert advice to make the most out of your travel experience. From packing essentials to cultural etiquette, our comprehensive guides will ensure you're well-prepared for your next adventure</p>
+                    <ul className="list-disc space-y-2 ml-6">
+                        <li className="text-[#7F8C8D]"><span className="text-[#7F8C8D] font-bold">Pack Light:</span> Traveling with less luggage not only makes it easier to move around but also saves you from excess baggage fees. Stick to essentials and versatile clothing items that you can mix and match.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Research Local Customs:</span> Before visiting a new destination, take some time to learn about the local customs and traditions. This includes understanding appropriate attire, greeting etiquette, and cultural norms to ensure respectful interactions with locals.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Stay Hydrated:</span> Traveling can be exhausting, especially in unfamiliar environments. Remember to drink plenty of water throughout your journey to stay hydrated and maintain your energy levels, especially in hot climates or during physical activities.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Backup Important Documents:</span> Make digital copies of important documents such as your passport, ID, travel insurance, and itinerary. Store these documents securely in cloud storage or email them to yourself for easy access in case of emergencies or loss.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Be Mindful of Scams:</span> Stay vigilant and be cautious of common travel scams targeting tourists, such as overcharging for goods or services, fake taxi drivers, or distraction techniques. Research common scams in your destination and stay alert to avoid falling victim.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Learn Basic Phrases:</span> Even if you don't speak the local language fluently, learning a few basic phrases such as "hello," "thank you," and "please" can go a long way in fostering positive interactions with locals and showing respect for their culture.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Travel Insurance:</span> Invest in comprehensive travel insurance to protect yourself against unexpected events such as trip cancellations, medical emergencies, or lost luggage. Read the policy carefully to understand coverage and exclusions before your trip.</li>
+                    </ul>
+                </div>
             </div>
+            <div className="flex gap-6 flex-row-reverse my-10 items-center">
+                <div className="w-2/5">
+                    <img className="h-[500px] w-full" src="https://i.ibb.co/6YhdxTs/2-dubrovnik-local-countryside-private-dining-experience.jpg" alt="" />
+                </div>
+                <div className="w-3/5">
+                    <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 ">Local Cuisine & Dining Experiences</h2>
+                    <p className="w-[70%] mt-2 mb-4">Indulge your taste buds in the rich and diverse culinary delights of our destination. From street food stalls to fine dining establishments, immerse yourself in the vibrant flavors and culinary traditions that define our region</p>
+                    <ul className="list-disc space-y-2 ml-6 text-md">
+                        <li className="text-[#7F8C8D]"><span className="text-[#7F8C8D] font-bold">Street Food Delights:</span>  Wander through bustling markets and vibrant streets to discover an array of tantalizing street food options. Sample local favorites such as savory kebabs, spicy noodles, flavorful curries, and mouthwatering desserts prepared right before your eyes.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Traditional Eateries:</span>  Step into quaint cafes, family-run eateries, and hidden gems tucked away in charming neighborhoods. Experience the warmth of local hospitality as you savor authentic dishes crafted from age-old recipes passed down through generations.Farm-to-Table Experiences: Embark on culinary adventures that take you from farm to table. Join guided tours to local farms and markets, where you can handpick fresh ingredients and learn about sustainable farming practices before enjoying farm-fresh meals prepared by talented chefs.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold"> Cooking Classes:</span> Delve deeper into the local cuisine with hands-on cooking classes led by expert chefs. Learn the secrets behind signature dishes, from the selection of ingredients to the techniques used in preparation. Afterwards, savor the fruits of your labor in a delightful feast.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold">Fine Dining Experiences:</span>  Treat yourself to unforgettable dining experiences at upscale restaurants renowned for their innovative menus and exquisite presentations. Indulge in gourmet creations that artfully blend traditional flavors with contemporary twists, accompanied by fine wines and impeccable service.</li>
+                        <li className="text-[#7F8C8D] "><span className="text-[#7F8C8D] font-bold"> Cultural Dinners:</span> Immerse yourself in the cultural heritage of the region through themed dinners and culinary events. Enjoy traditional performances, live music, and storytelling while savoring authentic dishes that reflect the rich tapestry of our cultural traditions.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     );
 };
