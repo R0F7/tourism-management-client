@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import { Slide } from "react-awesome-reveal";
 
 const AddTouristsSpot = () => {
     const { user } = useContext(AuthContext);
@@ -56,7 +57,9 @@ const AddTouristsSpot = () => {
                 <title>TravelWise | Add Tourists Spot </title>
             </Helmet>
             <div className="">
+            <Slide direction="left">
                 <h4 className="text-2xl md:text-3xl font-bold mb-6 text-[#A88E64] md:w-3/5 lg:mx-auto border-l-4 pl-2 border-l-[#A88E64]">Add Your Tourist Spot Information</h4>
+            </Slide>
             </div>
             <form onSubmit={handleSubmit} className="grid grid-cols-6 gap-x-4 gap-y-2 lg:w-3/5 mx-auto bg-gray-100 p-6 lg:p-10 rounded">
 

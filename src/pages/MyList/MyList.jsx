@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import { Slide } from "react-awesome-reveal";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -61,7 +62,9 @@ const MyList = () => {
                 <title>TravelWise | MyList </title>
             </Helmet>
             <div className="container p-2 mx-auto sm:p-4">
-                {/* <h2 className="mb-4 text-2xl font-semibold leading-tight text-[#A88E64] text-center">My List</h2> */}
+                <Slide direction="right">
+                    <h2 className="text-xl md:text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair">My Tourist Spots</h2>
+                </Slide>
                 <div className="overflow-x-auto my-4 md:my-6 lg:my-10">
                     <table className="min-w-full text-xs md:text-sm">
                         <colgroup>

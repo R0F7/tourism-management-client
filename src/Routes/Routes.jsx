@@ -58,7 +58,8 @@ const route = createBrowserRouter([
                 path: '/country/:name',
                 element: <ShowCountryData></ShowCountryData>,
                 loader: ({ params }) => fetch(`http://localhost:5000/tourists-country/${params.name}`)
-            }
+            },
+            
         ]
     }
 ])

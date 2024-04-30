@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import { Slide } from "react-awesome-reveal";
 
 const UpdatePage = () => {
     const data = useLoaderData();
@@ -46,11 +47,15 @@ const UpdatePage = () => {
             })
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit} className="grid grid-cols-6 gap-x-4 gap-y-2 w-[94%] md:w-3/5 mx-auto p-8 shadow-lg rounded-xl bg-gray-50 mb-6">
-                <Helmet>
-                    <title>TravelWise | Update </title>
-                </Helmet>
+        <div className="w-[94%] md:w-3/5 mx-auto">
+            <Slide direction="right">
+                <h2 className="text-xl md:text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair mb-5">Update What You Want</h2>
+            </Slide>
+
+            <Helmet>
+                <title>TravelWise | Update </title>
+            </Helmet>
+            <form onSubmit={handleSubmit} className="grid grid-cols-6 gap-x-4 gap-y-2 p-8 shadow-lg rounded-xl bg-gray-50 mb-6">
 
                 <label className="block col-span-6 md:col-span-6">
                     <span className="mb-1 opacity-75 font-medium">Image URL</span>

@@ -4,6 +4,7 @@ import TourismSpotCard from "../../components/TourismSpotCard";
 import { useEffect, useState } from "react";
 import CountryCard from "../../components/CountryCard";
 import { Helmet } from 'react-helmet-async';
+import { Rotate, Slide, } from "react-awesome-reveal";
 
 const Home = () => {
     const info = useLoaderData();
@@ -25,14 +26,19 @@ const Home = () => {
                 <title>TravelWise | Home </title>
             </Helmet>
             <Slider></Slider>
-           
             <div className="lg:my-10">
                 <div className="mt-4 md:mt-8 lg:mt-14 mb-6 lg:mb-10">
-                    <h4 className="text-xl md:text-2xl lg:text-4xl font-bold text-center text-[#A88E64] font-playfair">Top Tourist Spots Await You on TravelWise</h4>
-                    <p className="lg:w-3/4 text-center mx-auto mt-3 text-xs md:text-base text-[#7F8C8D] font-workSans">Embark on an unforgettable journey through Europe's cultural gems! Explore enchanting landmarks, vibrant cities, and breathtaking landscapes across France, Italy, Spain, England, Netherlands, and Switzerland with TravelWise's curated tourist spots section</p>
+                    <Slide direction="left">
+                        <h4 className="text-xl md:text-2xl lg:text-4xl font-bold text-center text-[#A88E64] font-playfair">Top Tourist Spots Await You on TravelWise</h4>
+                    </Slide>
+                    <Slide direction="right">
+                        <p className="lg:w-3/4 text-center mx-auto mt-3 text-xs md:text-base text-[#7F8C8D] font-workSans">Embark on an unforgettable journey through Europe's cultural gems! Explore enchanting landmarks, vibrant cities, and breathtaking landscapes across France, Italy, Spain, England, Netherlands, and Switzerland with TravelWise's curated tourist spots section</p>
+                    </Slide>
                 </div>
                 <div>
-                    <h4 className="text-2xl font-bold text-[#A88E64] mb-5 border-l-4 pl-2 border-[#A88E64] font-playfair">Tourists Spots</h4>
+                    <Slide direction="left">
+                        <h4 className="text-2xl font-bold text-[#A88E64] mb-5 border-l-4 pl-2 border-[#A88E64] font-playfair">Tourists Spots</h4>
+                    </Slide>
                     <div className="md:g-gray-100 ">
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-8 ">
                             {
@@ -43,7 +49,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="my-10">
-                <h4 className="text-2xl font-bold text-[#A88E64] mb-5 border-l-4 pl-2 border-[#A88E64] font-playfair">Countries</h4>
+                <Slide direction="left">
+                    <h4 className="text-2xl font-bold text-[#A88E64] mb-5 border-l-4 pl-2 border-[#A88E64] font-playfair">Countries</h4>
+                </Slide>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
                         countries.map((country) => <CountryCard key={country._id} country={country}></CountryCard>)
@@ -56,7 +64,9 @@ const Home = () => {
                     <img className="h-[220px] md:h-[370px] lg:h-[500px] w-full" src="https://i.ibb.co/F5Wm7hd/Blog-20210609b4d500f4290d9443c25ea31f915c3a18.png" alt="" />
                 </div>
                 <div>
-                    <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair">Travel Tips & Guides</h2>
+                    <Slide direction="right">
+                        <h2 className="text-xl md:text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair">Travel Tips & Guides</h2>
+                    </Slide>
                     <p className="lg:w-[70%] mt-2 mb-4 text-[#7F8C8D] font-playfair">Discover insider tips and expert advice to make the most out of your travel experience. From packing essentials to cultural etiquette, our comprehensive guides will ensure you're well-prepared for your next adventure</p>
                     <ul className="text-sm md:text-base list-disc space-y-2 ml-6">
                         <li className="text-[#7F8C8D]"><span className="text-[#7F8C8D] font-bold font-playfair">Pack Light:</span> Traveling with less luggage not only makes it easier to move around but also saves you from excess baggage fees. Stick to essentials and versatile clothing items that you can mix and match.</li>
@@ -74,7 +84,9 @@ const Home = () => {
                     <img className="h-[220px] md:h-[370px] lg:h-[500px] w-full" src="https://i.ibb.co/6YhdxTs/2-dubrovnik-local-countryside-private-dining-experience.jpg" alt="" />
                 </div>
                 <div className="lg:w-3/5">
-                    <h2 className="text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair">Local Cuisine & Dining Experiences</h2>
+                    <Slide direction="right">
+                        <h2 className="text-xl md:text-2xl font-bold text-[#A88E64] border-l-4 border-l-[#A88E64] pl-2 font-playfair">Local Cuisine & Dining Experiences</h2>
+                    </Slide>
                     <p className="md:w-[70%] mt-2 mb-4 text-[#7F8C8D]">Indulge your taste buds in the rich and diverse culinary delights of our destination. From street food stalls to fine dining establishments, immerse yourself in the vibrant flavors and culinary traditions that define our region</p>
                     <ul className="list-disc space-y-2 ml-6 text-sm md:text-base">
                         <li className="text-[#7F8C8D]"><span className="text-[#7F8C8D] font-bold font-playfair">Street Food Delights:</span>  Wander through bustling markets and vibrant streets to discover an array of tantalizing street food options. Sample local favorites such as savory kebabs, spicy noodles, flavorful curries, and mouthwatering desserts prepared right before your eyes.</li>
