@@ -10,7 +10,7 @@ const AllTouristsSpot = () => {
     const [data, setData] = useState(info)
 
     const handleSortAscending = () => {
-        fetch('http://localhost:5000/tourists-spot/sorting-data/ascending')
+        fetch('https://tourism-management-server-kohl.vercel.app/tourists-spot/sorting-data/ascending')
             .then(res => res.json())
             .then(data => {
                 setData(data);
@@ -19,7 +19,7 @@ const AllTouristsSpot = () => {
     }
 
     const handleSortDescending = () => {
-        fetch('http://localhost:5000/tourists-spot/sorting-data/descending')
+        fetch('https://tourism-management-server-kohl.vercel.app/tourists-spot/sorting-data/descending')
             .then(res => res.json())
             .then(data => {
                 setData(data);

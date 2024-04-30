@@ -11,7 +11,7 @@ const Home = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tourists-country')
+        fetch('https://tourism-management-server-kohl.vercel.app/tourists-country')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

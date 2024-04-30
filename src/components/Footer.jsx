@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="container px-5 md:px-0 mx-auto">
                 <footer className="grid grid-cols-3 lg:grid-cols-7 gap-5 pt-12 pb-5 lg:pb-14 text-base-content">
                     <nav className=" flex flex-col col-span-3 lg:col-span-1">
-                        <a className="text-xl lg:text-2xl font-bold mb-1">Travel<span className='text-[#A88E64]'>Wise</span></a>
+                        <a className="text-xl lg:text-2xl font-bold mb-1 flex -ml-4"><img className="w-14" src="https://i.ibb.co/XVMBjwL/Travel-Logojpg-removebg-preview.png" alt="" /> Travel<span className='text-[#A88E64]'>Wise</span></a>
                         <a className="link link-hover w-[75%] lg:w-[80%] mb-2 text-[#7F8C8D] font-medium">1309 Coffeen Avenue STE 1200 SHERIDAN WY 82801</a>
                         <a className="link link-hover flex items-center gap-2 text-[#52525E]"><span><BiSolidPhoneCall /></span>+1 (253) 225 5550</a>
                         <a className="link link-hover flex items-center gap-2 text-[#52525E]"><span><MdEmail /></span>tourassist@TravelWise.com</a>

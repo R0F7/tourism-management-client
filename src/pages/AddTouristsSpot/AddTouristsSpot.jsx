@@ -28,7 +28,7 @@ const AddTouristsSpot = () => {
         const info = { imageURL, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, userName, userEmail, userImage };
         console.log(userImage);
 
-        fetch('http://localhost:5000/tourists-spot', {
+        fetch('https://tourism-management-server-kohl.vercel.app/tourists-spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

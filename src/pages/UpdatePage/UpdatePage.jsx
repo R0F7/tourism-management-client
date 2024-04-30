@@ -24,7 +24,7 @@ const UpdatePage = () => {
 
         const info = { imageURL, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear };
 
-        fetch(`http://localhost:5000/tourists-spot/${_id}`, {
+        fetch(`https://tourism-management-server-kohl.vercel.app/tourists-spot/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

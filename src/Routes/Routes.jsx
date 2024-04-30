@@ -21,12 +21,12 @@ const route = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/tourists-spot'),
+                loader: () => fetch('https://tourism-management-server-kohl.vercel.app/tourists-spot'),
             },
             {
                 path: '/all-tourists-spot',
                 element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('http://localhost:5000/tourists-spot'),
+                loader: () => fetch('https://tourism-management-server-kohl.vercel.app/tourists-spot'),
             },
             {
                 path: '/add-tourists-spot',
@@ -47,17 +47,17 @@ const route = createBrowserRouter([
             {
                 path: '/tourists-spot/:id',
                 element: <ProtectedRoute><Details></Details></ProtectedRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`)
+                loader: ({ params }) => fetch(`https://tourism-management-server-kohl.vercel.app/tourists-spot/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element:<ProtectedRoute> <UpdatePage></UpdatePage></ProtectedRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tourists-spot/${params.id}`),
+                loader: ({ params }) => fetch(`https://tourism-management-server-kohl.vercel.app/tourists-spot/${params.id}`),
             },
             {
                 path: '/country/:name',
                 element: <ShowCountryData></ShowCountryData>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tourists-country/${params.name}`)
+                loader: ({ params }) => fetch(`https://tourism-management-server-kohl.vercel.app/tourists-country/${params.name}`)
             },
             
         ]
