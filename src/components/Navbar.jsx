@@ -4,7 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const handleLogOut = () => {
         logOut();
@@ -24,7 +24,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 border-b md:border-b-0 border-[#A88E64] pb-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,12 +41,12 @@ const Navbar = () => {
                     {NavLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="w-[49%] justify-end">
                 {
                     user ?
                         <div className='w-12 h-12 rounded-full tooltip  tooltip-bottom image-container z-10' data-tip={user?.displayName || 'Unknown'}>
                             <img className='w-full h-full rounded-full' src={user?.photoURL || 'https://i.ibb.co/51kxBQ8/istockphoto-1327592506-612x612.jpg'} alt="" />
-                            <button onClick={handleLogOut} className="hover-button">Logout</button>
+                            <button onClick={handleLogOut} className="hover-button text-sm lg:text-base">Logout</button>
                         </div>
                         
                         : <div className='flex gap-4'>

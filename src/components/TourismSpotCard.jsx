@@ -7,7 +7,7 @@ const TourismSpotCard = ({ data }) => {
     // console.log(data);
 
     return (
-        <div className='shadow-sm'>
+        <div className='shadow-lg md:shadow-sm mb-6'>
             <div className='h-[225px] relative'>
                 <img className='w-full h-full' src={imageURL} alt="" />
                 <span className='text-2xl text-gray-300 absolute top-5 right-5'><FaRegHeart /></span>
@@ -25,7 +25,7 @@ const TourismSpotCard = ({ data }) => {
                     <div>
                         <h4 className='text-lg font-semibold text-[#52525E]'>Seasonality: <span className='font-normal'>{seasonality}</span></h4>
                     </div>
-                    <div className='flex items-center border-y pt-1 pb-2 mt-2 mb-3 text-lg font-semibold gap-[10%]'>
+                    <div className='flex items-center border-y pt-1 pb-2 mt-2 mb-3 text-lg font-semibold gap-5 md:gap-[10%]'>
                         <p className='text-[#52525E]'>Country: <span className='font-normal'>{country_Name}</span></p>
                         <h4 className='text-[#52525E]'>Location: <span className='font-normal'>{location}</span></h4>
                     </div>
