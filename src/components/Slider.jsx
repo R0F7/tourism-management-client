@@ -52,7 +52,9 @@ export default function Slider() {
           <div className='relative '>
             <img className='w-full h-[220px] md:h-[350px] lg:h-[600px]' src="https://i.ibb.co/RCDxwhW/sagrada-familia-top-spain-tourist-attractions-1030x713.jpg" alt="" />
             <div className='absolute top-0 left-0 flex flex-col items-center justify-center bg-[rgb(0,0,0,.5)] h-full w-full'>
-              <h4 className='font-bold font-playfair text-3xl text-white mb-2 '>Spain</h4>
+              <Rotate>
+                <h4 className='font-bold font-playfair text-3xl text-white mb-2'>Spain</h4>
+              </Rotate>
               <Zoom>
                 <p className='text-white w-[90%] md:w-[60%] text-center text-xs md:text-base mx-auto'>Experience the enchanting beauty of Spain's diverse landscapes, from the sun-kissed beaches of Costa del Sol to the historic allure of Alhambra in Granada. Unveil the essence of Spanish culture</p>
               </Zoom>
