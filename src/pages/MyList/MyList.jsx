@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet-async';
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -55,10 +56,13 @@ const MyList = () => {
     }
 
     return (
-        <div>
+        <div className="min-h-[calc(100vh-488px)]">
+            <Helmet>
+                <title>TravelWise | MyList </title>
+            </Helmet>
             <div className="container p-2 mx-auto sm:p-4">
-                <h2 className="mb-4 text-2xl font-semibold leading-tight text-[#A88E64] text-center">My List</h2>
-                <div className="overflow-x-auto">
+                {/* <h2 className="mb-4 text-2xl font-semibold leading-tight text-[#A88E64] text-center">My List</h2> */}
+                <div className="overflow-x-auto my-4 md:my-6 lg:my-10">
                     <table className="min-w-full text-xs md:text-sm">
                         <colgroup>
                             <col />
@@ -70,7 +74,7 @@ const MyList = () => {
                         </colgroup>
                         <thead className="bg-[#A88E64] text-white">
                             <tr className="text-left">
-                                <th className="p-3">#</th>
+                                <th className="p-3 ">#</th>
                                 <th className="p-3">Spot Name</th>
                                 <th className="p-3">Location</th>
                                 <th className="p-3">Average Cost</th>
@@ -82,7 +86,7 @@ const MyList = () => {
 
                             {
                                 myData.map((data, idx) => <tr key={idx} className="border-b border-opacity-20 border-gray-900 bg-gray-100">
-                                    <td className="p-3 text-black">
+                                    <td className="p-3 text-black ">
                                         <p>{idx + 1}</p>
                                     </td>
                                     <td className="p-3 text-black">

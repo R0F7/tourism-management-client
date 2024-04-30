@@ -11,8 +11,8 @@ const CountryCard = ({ country }) => {
                 <img className='h-full w-full' src={image} alt="" />
             </div>
             <div>
-                <h4 className='text-2xl text-[#A88E64] font-bold mt-2 mb-2.5 border-b-2 border-[#A88E64] pb-1 pr-4 inline-block'>{country_name}</h4>
-                <p className='text-[#7F8C8D]'>{description}</p>
+                <h4 className='text-2xl text-[#A88E64] font-bold mt-2 mb-2.5 border-b-2 border-[#A88E64] pb-1 pr-4 inline-block font-playfair'>{country_name}</h4>
+                <p className='text-[#7F8C8D] font-workSan'>{description}</p>
             </div>
 
         </Link>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet-async';
 
 const AddTouristsSpot = () => {
     const { user } = useContext(AuthContext);
@@ -50,11 +51,14 @@ const AddTouristsSpot = () => {
     }
 
     return (
-        <div className="lg:mt-14">
+        <div className="lg:my-14 md:my-8 mx-5 md:mx-0 my-5">
+            <Helmet>
+                <title>TravelWise | Add Tourists Spot </title>
+            </Helmet>
             <div className="">
-                <h4 className="text-3xl font-bold mb-6 text-[#A88E64] md:w-3/5 mx-auto border-l-4 pl-2 border-l-[#A88E64]">Add Your Tourist Spot Information</h4>
+                <h4 className="text-2xl md:text-3xl font-bold mb-6 text-[#A88E64] md:w-3/5 lg:mx-auto border-l-4 pl-2 border-l-[#A88E64]">Add Your Tourist Spot Information</h4>
             </div>
-            <form onSubmit={handleSubmit} className="grid grid-cols-6 gap-x-4 gap-y-2 w-[94%] md:w-3/5 mx-auto bg-gray-100 p-10 rounded">
+            <form onSubmit={handleSubmit} className="grid grid-cols-6 gap-x-4 gap-y-2 lg:w-3/5 mx-auto bg-gray-100 p-6 lg:p-10 rounded">
 
                 <label className="block col-span-6 md:col-span-6 ">
                     <span className="mb-1 opacity-75 font-medium">Image URL</span>
@@ -84,14 +88,14 @@ const AddTouristsSpot = () => {
                     <input type="text" name="location" id="location" placeholder="Location" className="block border-2 mt-0.5 p-2.5 w-full rounded-md shadow-lg focus:ring focus:ring-opacity-75 focus:dark:ring-[#A88E64] outline-[#A88E64] dark:bg-gray-100" data-sider-insert-id="86ff7d83-2412-40b8-96d3-6b893f6334eb" data-sider-select-id="0beae578-82ab-450c-9e89-e1d57e43b6c9" required />
                 </label>
                 <label className="block col-span-3 md:col-span-3">
-                    <span className="mb-1 opacity-75 font-medium">Total Visitors PerYear</span>
+                    <span className="mb-1 opacity-75 font-medium">Total Visitors </span>
                     <input type="text" name="totalVisitor" id="visitor" placeholder="Total Visitors PerYear" className="block border-2 mt-0.5 p-2.5 w-full rounded-md shadow-lg focus:ring focus:ring-opacity-75 focus:dark:ring-[#A88E64] outline-[#A88E64] dark:bg-gray-100" data-sider-insert-id="86ff7d83-2412-40b8-96d3-6b893f6334eb" data-sider-select-id="0beae578-82ab-450c-9e89-e1d57e43b6c9" required />
                 </label>
 
 
                 <label className="block col-span-3 md:col-span-2">
                     <span className="mb-1 opacity-75 font-medium">Average Cost</span>
-                    <input type="text" name="averageCost" id="cost" placeholder="Average Cost" className="block border-2 mt-0.5 p-2.5 w-full rounded-md shadow-lg focus:ring focus:ring-opacity-75 focus:dark:ring-[#A88E64] outline-[#A88E64] dark:bg-gray-100" data-sider-insert-id="86ff7d83-2412-40b8-96d3-6b893f6334eb" data-sider-select-id="0beae578-82ab-450c-9e89-e1d57e43b6c9" required />
+                    <input type="number" name="averageCost" id="cost" placeholder="Average Cost" className="block border-2 mt-0.5 p-2.5 w-full rounded-md shadow-lg focus:ring focus:ring-opacity-75 focus:dark:ring-[#A88E64] outline-[#A88E64] dark:bg-gray-100" data-sider-insert-id="86ff7d83-2412-40b8-96d3-6b893f6334eb" data-sider-select-id="0beae578-82ab-450c-9e89-e1d57e43b6c9" required />
                 </label>
                 <label className="block col-span-3 md:col-span-2">
                     <span className="mb-1 opacity-75 font-medium">Seasonality</span>

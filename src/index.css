@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +12,7 @@
     position: absolute;
     top: 50%;
     left: -50px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -250%);
     opacity: 0;
     transition: opacity 0.3s ease;
     background: #A88E64;
@@ -18,9 +20,11 @@
     padding: 9px 15px;
     border-radius: 8px;
     font-weight: 500;
+    opacity: 1;
   }
   
   .image-container:hover .hover-button {
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
   

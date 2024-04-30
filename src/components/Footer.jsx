@@ -8,8 +8,8 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <div className="bg-base-300 px-5 md:px-0">
-            <div className="container mx-auto">
+        <div className="bg-base-300 ">
+            <div className="container px-5 md:px-0 mx-auto">
                 <footer className="grid grid-cols-3 lg:grid-cols-7 gap-5 pt-12 pb-5 lg:pb-14 text-base-content">
                     <nav className=" flex flex-col col-span-3 lg:col-span-1">
                         <a className="text-xl lg:text-2xl font-bold mb-1">Travel<span className='text-[#A88E64]'>Wise</span></a>
@@ -76,10 +76,10 @@ const Footer = () => {
                     </nav>
                 </footer>
             </div>
-            <div className="bg-gray-300 py-4">
+            <div className="bg-gray-800 text-white py-4">
                 <div className="flex items-center container mx-auto justify-between">
                     <div className="">Copyright &copy; 2024 R0F7. Design & Developed by R0F7.</div>
-                    <div className="flex text-2xl gap-2 text-[#7F8C8D]">
+                    <div className="flex text-2xl gap-2 text-white">
                         <span><RiFacebookCircleLine /></span>
                         <span><TiSocialTwitterCircular /></span>
                         <span><TbBrandInstagram /></span>
